@@ -12,7 +12,6 @@ A2[1:x.size, :x.size-1] = A1
 A = np.eye(x.size)
 A[0, x.size-1] = -1
 A = A+A2
-print(A)
 
 for _ in range(255):
     u.append(u[_-1]-(0.5*A @ u[_-1]))
