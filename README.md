@@ -9,3 +9,9 @@ includes:
   Task1 - lunar_images (outputs pictures in own folder)
   Task2 - signals (outputs graphs in python window)
   Task3 - process (outputs gif file in own folder)
+LabPandas - is a folder with my work on pandas (3-d lab);
+includes:
+  Task1 - transactions (outputs text in console)
+  Task2 - flights (outputs graphs in python window)
+  Task3 - students (outputs graphs in python window and  text in console);
+
