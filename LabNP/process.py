@@ -6,12 +6,7 @@ f0 = np.genfromtxt("process/start.txt", delimiter="\n")
 x = np.linspace(0, f0.size, f0.size, endpoint=True)
 u = [f0]
 
-A1 = (np.eye(x.size-1)*(-1))
-A2 = np.zeros((x.size, x.size))
-A2[1:x.size, :x.size-1] = A1
-A = np.eye(x.size)
-A[0, x.size-1] = -1
-A = A+A2
+A = np.eye(x.size) - np.roll(np.eye(x.size), -1, axis=1)
 
 for _ in range(255):
     u.append(u[_-1]-(0.5*A @ u[_-1]))
