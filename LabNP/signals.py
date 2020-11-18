@@ -5,11 +5,10 @@ f = np.genfromtxt("signals/signal"+input()+".dat", delimiter="\n")
 nf = np.copy(f)
 x = np.linspace(0, f.size, f.size)
 begin = nf[0:9]
-for _ in range(1, 8):
-    begin[_] = (begin[_] + begin[_-1])/2
+for _ in range(1, 9):
+    begin[_] = sum(f[0:_+1])/(_+1)
 for i in range(f.size-9):
     nf[9+i] = np.sum(f[i:(10+i)]/10)
-
 fig, axs = plt.subplots(2)
 axs[0].set_title("Raw signal")
 axs[0].grid()
