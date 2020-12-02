@@ -36,12 +36,9 @@ axs[0].plot(x1, y1, '-', label='sympy', color='red')
 axs[0].plot(x2, y2, '--', label='scipy', color='black')
 axs[0].legend(loc='upper right')
 
-for i in range(y1.size):
-    y1[i] -= y2[i]
-
 axs[1].set_title("Difference")
 axs[1].grid()
-axs[1].plot(x1, y1, color="black")
+axs[1].plot(x1, y1-y2.flatten(), color="black")
 
 plt.show()
 

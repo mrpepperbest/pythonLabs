@@ -15,7 +15,6 @@ plt.show()
 
 print("================================")
 print("Geniuses - guys, who got > 10 points in problem G or in problem H, so:")
-print("Geniuses from faculty groups:\n",
-      pd.unique((df3[(df3["H"] > 10) | (df3["G"] > 10)])["group_faculty"]))
-print("Found themselves in IT groups:\n",
-      pd.unique((df3[(df3["H"] > 10) | (df3["G"] > 10)])["group_out"]))
+print("Geniuses :\n",
+      df3[(df3["H"] > 10) | (df3["G"] > 10)])
+
